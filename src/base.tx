@@ -1,0 +1,48 @@
+<html>
+  <head>
+    : block title -> {
+    <title>charmkit.pl</title>
+    : }
+    <script src="javascripts/app.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/app.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="nav navbar-nav">
+            <li><a href="http://blog.charmkit.pl">Blog</a></li>
+            <li><a href="/docs/users/#getting-started">Get started</a></li>
+            <li><a href="/docs/users">User Manual</a></li>
+            <li><a href="/docs/developers">Developer Manual</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="splash">
+          <div class="container">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+              <div class="title">
+                charmkit<br />
+                <small>easy does it charm authoring</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    : block body -> { }
+  </body>
+</html>

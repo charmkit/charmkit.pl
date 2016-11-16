@@ -1,0 +1,8 @@
+: cascade base
+: around body -> {
+<div class="container">
+  <div class="row">
+    <h2>welcome</h2>
+  </div>
+</div>
+: }

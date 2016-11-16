@@ -1,0 +1,19 @@
+{
+  "name": "charmkit.pl",
+  "version": "1.0.0",
+  "description": "charmkit.pl website",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:charmkit/charmkit.pl.git",
+    "type": "git"
+  },
+  "author": "Adam Stokes <battlemidget@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
+    "http-server": "^0.9.0",
+    "jquery": "^3.1.1",
+    "node-sass": "^3.13.0"
+  }
+}
