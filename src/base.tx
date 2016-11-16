@@ -27,7 +27,7 @@
     <div class="container">
       <div class="row">
         <hr/>
-        &copy; 2016 Adam Stokes [ <a href="https://github.com/charmkit/App-CharmKit">Code</a> ]
+        &copy; 2016 battlemidget [ <a href="https://github.com/charmkit/App-CharmKit">Code</a> ]
       </div>
     </div>
     <script src="javascripts/app.min.js"></script>

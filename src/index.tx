@@ -5,7 +5,7 @@
     <h1>
       CharmKit is a Juju charm development framework for easing the burden on creating charms for your applications.
     </h1>
-    <h2 class="page-header">Usage</h2>
+    <h2 class="page-header">SYNOPSIS</h2>
     In your <strong><code>hooks/install</code></strong> file place the following at the top:
     <pre><code>
       #!/usr/bin/env perl
@@ -14,7 +14,18 @@
       }
 
       use charm;
+
+      # Now make use of Charmkit's DSL for installing packages
+      pkg ['nginx-full', 'fail2ban'];
+
+      # Create a file
+      file "/etc/nginx/sites-enabled/mysite.com", source => "files/templates/nginx/mysite.com.conf";
+
+      # Run a command
+      run "unlink /etc/nginx/sites-enabled/default";
     </code></pre>
+
+    <p>This touches on just a small portion of the DSL to help you write charms quickly and effeciently.
   </div>
 </div>
 : }
