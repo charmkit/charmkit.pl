@@ -3,15 +3,16 @@
     background-image: url('/images/splash.jpeg');
     background-position: 0% 70%;
     background-size: cover;
-    margin-top: -21px;
     .title {
         text-shadow: 1px 1px 1px #000;
         font-weight: bolder;
-        font-size: 4rem;
+        font-size: 5rem;
         color: #fefefe;
+        font-family: 'Eczar', serif;
         margin-top: 100px;
         small {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            font-weight: normal;
         }
     }
 }

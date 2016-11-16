@@ -2,7 +2,19 @@
 : around body -> {
 <div class="container">
   <div class="row">
-    <h2>welcome</h2>
+    <h1>
+      CharmKit is a Juju charm development framework for easing the burden on creating charms for your applications.
+    </h1>
+    <h2 class="page-header">Usage</h2>
+    In your <strong><code>hooks/install</code></strong> file place the following at the top:
+    <pre><code>
+      #!/usr/bin/env perl
+      BEGIN {
+         system "curl -L http://charmkit.pl/setup.sh | sh";
+      }
+
+      use charm;
+    </code></pre>
   </div>
 </div>
 : }
