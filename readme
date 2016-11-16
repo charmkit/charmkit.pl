@@ -1,4 +1,9 @@
 charmkit.pl
-===========
-
+-----------
 Website code
+
+setup
+-----
+
+  $ cpanm -n --installdeps .
+  $ rex serve
