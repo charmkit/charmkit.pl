@@ -6,7 +6,7 @@
       CharmKit is a Juju charm development framework for easing the burden on creating charms for your applications.
     </h1>
     <h2 class="page-header">SYNOPSIS</h2>
-    In your <strong><code>hooks/install</code></strong> file place the following at the top:
+    In your <strong><code>hooks/install</code></strong> file place the following:
     <pre><code>
       #!/usr/bin/env perl
       BEGIN {
