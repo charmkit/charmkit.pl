@@ -1,0 +1,20 @@
+{
+  "name": "charmkit.pl",
+  "description": "charmkit.pl website",
+  "main": "index.js",
+  "authors": [
+    "Adam Stokes <battlemidget@users.noreply.github.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/charmkit/charmkit.pl",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Flowtype.js": "^1.1.0"
+  }
+}

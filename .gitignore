@@ -3,3 +3,4 @@ public/images
 public/*.html
 public/javascripts
 public/stylesheets
+bower_components

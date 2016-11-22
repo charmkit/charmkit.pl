@@ -6,14 +6,16 @@ use Text::Xslate;
 set 'theme' => 'cosmo';
 
 my $bootstrap  = path('node_modules/bootstrap/dist');
-my $bootswatch = path('node_modules/bootswatch/'.get 'theme');
+my $bootswatch = path('node_modules/bootswatch/' . get 'theme');
+my $flowtype   = path('bower_components/Flowtype.js/flowtype.js');
 my $jquery     = path('node_modules/jquery/dist');
 
 desc "Generate CSS";
 task "scss", sub {
     file "public/stylesheets", ensure => "directory";
     run "cat $bootswatch/bootstrap.min.css > public/stylesheets/app.min.css";
-    run "cat src/stylesheets/main.scss | ./node_modules/.bin/node-sass --output-style compressed >> public/stylesheets/app.min.css";
+    run
+      "cat src/stylesheets/main.scss | ./node_modules/.bin/node-sass --output-style compressed >> public/stylesheets/app.min.css";
 };
 
 desc "Generate javascript";
@@ -21,6 +23,8 @@ task "js", sub {
     file "public/javascripts", ensure => "directory";
     run "cat $jquery/jquery.min.js > public/javascripts/app.min.js";
     run "cat $bootstrap/js/bootstrap.min.js >> public/javascripts/app.min.js";
+    run "./node_modules/.bin/uglifyjs $flowtype | tee -a public/javascripts/app.min.js";
+    run "./node_modules/.bin/uglifyjs src/javascripts/main.js | tee -a public/javascripts/app.min.js";
 };
 
 desc "Run local http server";
@@ -36,12 +40,13 @@ task "build", sub {
     run_task 'scss';
     my $tx = Text::Xslate->new(path => ['src']);
     file "public/index.html", content => $tx->render('index.tx', {});
-    file "public/setup.sh", source => 'src/setup.sh';
-    cp "src/images", "public";
+    file "public/setup.sh",   source  => 'src/setup.sh';
+    cp "src/images",          "public";
 };
 
 desc "install system deps";
 task "sysdeps", sub {
     run "yarn";
+    run "./node_modules/.bin/bower install";
     run "cpanm -n --installdeps .";
 };
